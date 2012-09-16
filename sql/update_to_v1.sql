@@ -1,0 +1,12 @@
+ALTER TABLE `tovperelik`
+ ADD COLUMN `Cina_1` DOUBLE(16,6) AFTER `Cina`,
+ ADD COLUMN `Cina_2` DOUBLE(16,6) AFTER `Cina_1`,
+ ADD COLUMN `Cina_3` DOUBLE(16,6) AFTER `Cina_2`,
+ ADD COLUMN `ForPrice` BOOLEAN DEFAULT false AFTER `Cina_3`;
+ 
+CREATE TABLE IF NOT EXISTS skladDbVersion(
+ id INTEGER UNSIGNED,
+ ver INTEGER UNSIGNED
+);
+
+INSERT INTO skladDbVersion(id, ver) VALUES (1,1);

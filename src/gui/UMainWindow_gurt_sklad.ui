@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UMainWindow_gurt_sklad</class>
+ <widget class="QMainWindow" name="UMainWindow_gurt_sklad">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ЕлКом Pro</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget_sklad">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_vhNakladna">
+       <attribute name="title">
+        <string>Вхідна накладна</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>799</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Програма</string>
+    </property>
+    <addaction name="action_show_debuger"/>
+    <addaction name="separator"/>
+    <addaction name="action_close_program"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Налаштування</string>
+    </property>
+    <addaction name="action_options"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Друк</string>
+    </property>
+    <addaction name="action_printObigIZalyshky"/>
+    <addaction name="action_printVidomistZbutuExt"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Довідка</string>
+    </property>
+    <addaction name="action_about_programm"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar_programm">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_show_debuger"/>
+   <addaction name="separator"/>
+   <addaction name="action_close_program"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_printDocks">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="action_close_program">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/button_cancel.png</normaloff>:/pictures/button_cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+   <property name="toolTip">
+    <string>Вихід з програми</string>
+   </property>
+  </action>
+  <action name="action_about_programm">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/trust_info.png</normaloff>:/pictures/trust_info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Про програму</string>
+   </property>
+  </action>
+  <action name="action_show_debuger">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/debugger.png</normaloff>:/pictures/debugger.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відладочне вікно</string>
+   </property>
+  </action>
+  <action name="action_printObigIZalyshky">
+   <property name="text">
+    <string>Обігу та залишків</string>
+   </property>
+  </action>
+  <action name="action_printVidomistZbutuExt">
+   <property name="text">
+    <string>Розгорнутої відомості збуту</string>
+   </property>
+  </action>
+  <action name="action_options">
+   <property name="text">
+    <string>Опції</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../images/images_sklad.qrc"/>
+  <include location="../images/images_sklad.qrc"/>
+ </resources>
+ <connections/>
+</ui>

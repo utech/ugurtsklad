@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UForm_VhidniNakladni</class>
+ <widget class="QWidget" name="UForm_VhidniNakladni">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>676</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вхідна накладна</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="_2">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_vhidni_nakladni_date_filtr">
+         <property name="text">
+          <string>Фільтр по даті з</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_vhidni_nakladni_filtr_from_date"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_vhidni_nakladni_po_text">
+         <property name="text">
+          <string>по</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_vhidni_nakladni_filtr_to_date"/>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableWidget_vhidni_nakladni">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string>id</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Номер накладної</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Дата прийн.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Постачальник</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Сума</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Примітка</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_VhidniNucludniSum">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="_3">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_vhidna_nakladna_stvoryty">
+         <property name="text">
+          <string>Створити</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/images_sklad.qrc">
+           <normaloff>:/pictures/greplus.png</normaloff>:/pictures/greplus.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_vhidna_nakladna_drukuvaty">
+         <property name="text">
+          <string>Друкувати</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/images_sklad.qrc">
+           <normaloff>:/pictures/printer.png</normaloff>:/pictures/printer.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_vhidna_nakladna_vydalyty">
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/images_sklad.qrc">
+           <normaloff>:/pictures/redminus.png</normaloff>:/pictures/redminus.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_closeProgram">
+         <property name="text">
+          <string>Закрити</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/images_sklad.qrc">
+           <normaloff>:/pictures/button_cancel.png</normaloff>:/pictures/button_cancel.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="action_openNakladna">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/compose.png</normaloff>:/pictures/compose.png</iconset>
+   </property>
+   <property name="text">
+    <string>Проглянути накладну</string>
+   </property>
+   <property name="toolTip">
+    <string>Проглянути накладну</string>
+   </property>
+  </action>
+  <action name="action_createNakladna">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/page.png</normaloff>:/pictures/page.png</iconset>
+   </property>
+   <property name="text">
+    <string>Створити накладну</string>
+   </property>
+   <property name="toolTip">
+    <string>Створити нову накладну</string>
+   </property>
+  </action>
+  <action name="action_deleteNakladna">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/delete.png</normaloff>:/pictures/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Видалення позначених накладних</string>
+   </property>
+   <property name="toolTip">
+    <string>Видалення позначених накладних</string>
+   </property>
+  </action>
+  <action name="action_printNakladna">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/print.png</normaloff>:/pictures/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк накладної</string>
+   </property>
+   <property name="toolTip">
+    <string>Друк вхідної накладної</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../images/images_sklad.qrc"/>
+ </resources>
+ <connections/>
+</ui>

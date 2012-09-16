@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UDialog_editNakladnaSklad</class>
+ <widget class="QDialog" name="UDialog_editNakladnaSklad">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>763</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вхідна накладна</string>
+  </property>
+  <layout class="QGridLayout">
+   <property name="horizontalSpacing">
+    <number>2</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>1</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item row="1" column="0">
+    <layout class="QGridLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_nucl_number">
+       <property name="text">
+        <string>Номер накладної</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_nucl_number"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_stvor_nucl">
+       <property name="text">
+        <string>Дата створення накладної</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QDateEdit" name="dateEdit_stvor_nucl">
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_postachalnyk">
+       <property name="text">
+        <string>Постачальник</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboBox_postachalnyk"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_prymitka">
+       <property name="text">
+        <string>Примітка</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit_prymitka"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>order</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Назва</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Кількість</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ціна</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Сума</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <layout class="QHBoxLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_add_tovar_str">
+       <property name="text">
+        <string>Додати товар</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images_sklad.qrc">
+         <normaloff>:/pictures/greplus.png</normaloff>:/pictures/greplus.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_addTovarDovNakl">
+       <property name="text">
+        <string>Товар в накл.+довідник</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_del_tovar_str">
+       <property name="text">
+        <string>Видалити товар</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images_sklad.qrc">
+         <normaloff>:/pictures/redminus.png</normaloff>:/pictures/redminus.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_printNakladna">
+       <property name="text">
+        <string>Друкувати</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images_sklad.qrc">
+         <normaloff>:/pictures/print.png</normaloff>:/pictures/print.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_accept">
+       <property name="text">
+        <string>Зберегти зміни в реквізитах</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images_sklad.qrc">
+         <normaloff>:/pictures/save.png</normaloff>:/pictures/save.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_reject">
+       <property name="text">
+        <string>Закрити</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images_sklad.qrc">
+         <normaloff>:/pictures/button_cancel.png</normaloff>:/pictures/button_cancel.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_nucludna_suma">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="Line" name="line_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <action name="action_addTovarString">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/greplus.png</normaloff>:/pictures/greplus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Додати стрічку товару</string>
+   </property>
+   <property name="toolTip">
+    <string>Додати стрічку товару</string>
+   </property>
+  </action>
+  <action name="action_deleteTovarString">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/redminus.png</normaloff>:/pictures/redminus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Видалення стрічки товару</string>
+   </property>
+   <property name="toolTip">
+    <string>Видалення стрічки товару</string>
+   </property>
+  </action>
+  <action name="action_printNakladna">
+   <property name="icon">
+    <iconset resource="../images/images_sklad.qrc">
+     <normaloff>:/pictures/print.png</normaloff>:/pictures/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк накладної</string>
+   </property>
+   <property name="toolTip">
+    <string>Друк накладної</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../images/images_sklad.qrc"/>
+  <include location="../images/images_sklad.qrc"/>
+ </resources>
+ <connections/>
+</ui>

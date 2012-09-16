@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UDialog_katalog_tovaru</class>
+ <widget class="QWidget" name="UDialog_katalog_tovaru">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>441</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Каталог товару</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBox_price">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Каталог товарів</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Групи товарів</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <property name="margin">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_tovGroups">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <column>
+              <property name="text">
+               <string>id</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Група</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Рахунок</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QPushButton" name="pushButton_addGroupTov">
+                 <property name="text">
+                  <string>Додати групу</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+                   <normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-add-032x032.png</normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-add-032x032.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_delGroupTov">
+                 <property name="text">
+                  <string>Видалити групу</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+                   <normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-remove-032x032.png</normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-remove-032x032.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>5</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Товари</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <property name="margin">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_tovPerelik">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ContiguousSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectItems</enum>
+             </property>
+             <column>
+              <property name="text">
+               <string>id</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Група товару</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Номер</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Назва товару</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Одиниці</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Ціна</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Для прайсу</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Примітка</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_addTov">
+               <property name="text">
+                <string>Додати товар</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+                 <normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-add-032x032.png</normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-add-032x032.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_delTov">
+               <property name="text">
+                <string>Видалити товар</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+                 <normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-remove-032x032.png</normaloff>:/icontexto_webdev_pack/icontexto_webdev_pack/icontexto-webdev-remove-032x032.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <action name="action_pasteTovStrings">
+   <property name="icon">
+    <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+     <normaloff>:/function_icon_set/function_icon_set/arrow_down_green_48.png</normaloff>:/function_icon_set/function_icon_set/arrow_down_green_48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вставити дані з буферу обміну</string>
+   </property>
+   <property name="toolTip">
+    <string>Вставити дані з буферу обміну</string>
+   </property>
+  </action>
+  <action name="action_createPrice">
+   <property name="icon">
+    <iconset resource="../../../../../../upriser/src/images/UPricerImg.qrc">
+     <normaloff>:/function_icon_set/function_icon_set/navigate_48.png</normaloff>:/function_icon_set/function_icon_set/navigate_48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сформувати прайс</string>
+   </property>
+   <property name="toolTip">
+    <string>Сформувати прайс</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../../../../../upriser/src/images/UPricerImg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
